@@ -1,8 +1,10 @@
 # Virtual environment — never commit
 .venv/
 
-# Downloaded DICOM files — never commit (large + PHI risk even when de-identified)
-data/
+# Downloaded DICOM files — never commit (large + PHI risk even when de-identified).
+# Use data/* (not data/) so git doesn't ignore the folder itself, which allows
+# the !SOURCES.md exception below to work without needing "git add -f".
+data/*
 # …but DO track the source manifest
 !data/SOURCES.md
 
