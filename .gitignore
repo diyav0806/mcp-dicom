@@ -1,0 +1,23 @@
+# Virtual environment — never commit
+.venv/
+
+# Downloaded DICOM files — never commit (large + PHI risk even when de-identified)
+data/
+# …but DO track the source manifest
+!data/SOURCES.md
+
+# Python byte-code caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Pytest cache
+.pytest_cache/
+
+# Runtime audit log (regenerated when the server runs; not part of source)
+audit.jsonl
+
+# Editor / OS noise
+.vscode/*.log
+.DS_Store
+Thumbs.db

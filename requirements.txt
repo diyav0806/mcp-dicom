@@ -1,0 +1,23 @@
+# ── Core MCP SDK (v2 — the current stable release) ──────────────────────────
+# Provides the @mcp.tool() decorator and mcp.run() for stdio transport.
+# If VS Code Copilot agent mode fails to connect, pin this to mcp>=1.28,<2
+# and follow the fallback instructions in README.md.
+mcp
+
+# ── DICOM reading ─────────────────────────────────────────────────────────────
+# Used in index.py to open .dcm files and read header tags (never pixel data).
+pydicom
+
+# ── Numerical arrays (pydicom dependency; also used for PixelSpacing parsing) ─
+numpy
+
+# ── In-memory table of DICOM header fields ───────────────────────────────────
+# Used in index.py to collect one row per DICOM file into a searchable table.
+pandas
+
+# ── NCI Imaging Data Commons metadata + download ─────────────────────────────
+# Provides IDCClient with sql_query() and download_dicom_series().
+idc-index
+
+# ── Offline testing framework ─────────────────────────────────────────────────
+pytest
