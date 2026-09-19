@@ -1,5 +1,3 @@
-# Runtime paths — edit these if you move the project folder.
-# All other code reads from this file so you never hard-code paths.
 {
   "data_dir": "data",
   "audit_log": "audit.jsonl"
