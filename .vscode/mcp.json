@@ -1,0 +1,11 @@
+{
+  "servers": {
+    "mini-dicom-mcp": {
+      "type": "stdio",
+      "command": "${workspaceFolder}/.venv/Scripts/python",
+      "args": [
+        "${workspaceFolder}/server.py"
+      ]
+    }
+  }
+}
