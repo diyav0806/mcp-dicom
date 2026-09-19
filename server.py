@@ -41,7 +41,7 @@ def query_patients(patient_id: str = "") -> str:
         modalities = sorted(group["Modality"].unique().tolist())
         studies_count = int(group["StudyInstanceUID"].nunique())
         series_count = int(group["SeriesInstanceUID"].nunique())
-        total_slices = int(group["slice_count"].sum())
+        total_slices = len(group)
         
         results.append({
             "patient_id": pid,
@@ -88,7 +88,7 @@ def query_studies(patient_id: str = "", modality: str = "") -> str:
             "modality": str(first_row["Modality"]),
             "body_part_examined": str(first_row["BodyPartExamined"]),
             "series_count": int(group["SeriesInstanceUID"].nunique()),
-            "total_slices": int(group["slice_count"].sum())
+            "total_slices": len(group)
         })
 
     return json.dumps({"studies": results, "count": len(results)}, indent=2)
